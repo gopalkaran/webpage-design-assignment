@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background: #222;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 5rem auto 5rem;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+header svg {
+  fill: white;
+}
+
+header h2 {
+  color: white;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+main article {
+  /* width: 100%; */
+  background-color: #444;
+  margin: 0 0 2rem 0;
+  border-radius: 1rem;
+}
+
+main article .article-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+main article .article-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+main article .article-info h4 {
+  margin-right: auto;
+  color: white;
+  font-weight: 500;
+}
+
+main article .article-info div {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main article .article-info div:hover {
+  background-color: #aaa;
+}
+
+main article .article-info .heart {
+  background-color: #f87171;
+}
+
+main article .article-info .send {
+  background-color: #8b5cf6;
+  position: relative;
+}
+
+main article .article-info svg {
+  width: 1rem;
+  fill: white;
+}
+
+main article .article-info .send svg {
+  transform: rotate(-40deg);
+  position: absolute;
+  left: 0.6rem;
+  top: -0.2rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #444;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.footer-container {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container div .info {
+  color: #bbb;
+  font-weight: 500;
+}
+
+footer svg {
+  fill: #bbb;
+  width: 2rem;
+}
+
+.active-svg {
+  fill: #8b5cf6;
+}
+
+.active-info {
+  color: white;
+}
