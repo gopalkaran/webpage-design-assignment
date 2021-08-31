@@ -176,6 +176,14 @@ footer svg {
 }
 
 @media only screen and (max-width: 350px) {
+  main {
+    grid-auto-rows: 16rem;
+  }
+
+  main article .article-img {
+    height: 12rem;
+  }
+
   main article .article-info .send svg {
     position: absolute;
     left: 0.4rem;
@@ -193,5 +201,13 @@ footer svg {
 
   main article .article-info svg {
     width: 0.8rem;
+  }
+
+  .footer-container [data-footer-item] svg {
+    width: 1.5rem;
+  }
+
+  .footer-container [data-footer-item] .info {
+    font-size: 0.6rem;
   }
 }

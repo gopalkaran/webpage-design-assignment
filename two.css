@@ -271,3 +271,13 @@ footer svg {
 .active[data-footer-item] .info {
   color: white;
 }
+
+@media only screen and (max-width: 350px) {
+  .footer-container [data-footer-item] svg {
+    width: 1.5rem;
+  }
+
+  .footer-container [data-footer-item] .info {
+    font-size: 0.6rem;
+  }
+}
