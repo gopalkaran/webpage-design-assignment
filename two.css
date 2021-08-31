@@ -13,7 +13,7 @@ body {
   background: #222;
   display: grid;
   grid-template-columns: 0.1fr 1fr 0.1fr;
-  grid-template-rows: 5rem 7rem 14rem 20rem 5rem;
+  grid-template-rows: 5rem 7rem 14rem 21rem 5rem;
   grid-template-areas:
     "header header header"
     ". userlist userlist"
@@ -163,9 +163,58 @@ header {
   margin-bottom: 1rem;
 }
 
-.video-list {
+.video-section {
   grid-area: videolist;
-  background-color: turquoise;
+  /* background-color: turquoise; */
+  margin-bottom: 1rem;
+}
+
+.video-section h3 {
+  color: white;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(3, 20rem);
+  grid-template-rows: 8rem 8rem;
+  margin-top: 1rem;
+  grid-gap: 1rem;
+  overflow-x: scroll;
+}
+
+.video-list .video {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.video-list .video img {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.video .video-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.video .video-info h4 {
+  font-weight: 600;
+  color: white;
+}
+
+.video .video-info h5 {
+  font-weight: 500;
+  color: #999;
+}
+
+.video-list .video .video-metadata {
+  font-size: 0.7rem;
+  color: #999;
 }
 
 footer {
