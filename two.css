@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background: #222;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 5rem 7rem 10rem 20rem 5rem;
+  grid-template-areas:
+    "header header header"
+    ". userlist userlist"
+    ". hero hero"
+    ". videolist videolist"
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: yellow;
+}
+
+.user-list {
+  grid-area: userlist;
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 1rem; */
+  overflow-x: scroll;
+}
+
+.user-list .user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.user-list .user .active-holder {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+}
+
+.user-list .user .active-holder .active {
+  height: 1rem;
+  width: 1rem;
+  background-color: #60a5fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.user-list .user .active svg {
+  width: 50%;
+}
+
+.user-list .user:first-child {
+  margin-left: 5.5rem;
+}
+
+.user-list .user h6 {
+  color: #999;
+  font-weight: 400;
+}
+
+.user-list .img-holder {
+  width: 4rem;
+  height: 4rem;
+  /* background-color: green; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #60a5fa;
+}
+
+.user-list .img-holder img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero {
+  grid-area: hero;
+  background-color: transparent;
+}
+
+.hero .hero-item {
+  color: white;
+  height: 100%;
+  width: 18rem;
+  border-radius: 1rem;
+}
+
+.hero .hero-img {
+  background: url(hero_image_one.jpeg);
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.video-list {
+  grid-area: videolist;
+  background-color: turquoise;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #444;
+  display: grid;
+  grid-template-columns: inherit;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.footer-container {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container div .info {
+  color: #999;
+  font-weight: 500;
+}
+
+footer svg {
+  fill: #999;
+  width: 2rem;
+}
+
+.active[data-footer-item] svg {
+  fill: #8b5cf6;
+}
+
+.active[data-footer-item] .info {
+  color: white;
+}
