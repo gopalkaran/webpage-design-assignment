@@ -27,6 +27,11 @@ header {
   background-color: #222;
   display: grid;
   grid-template-columns: inherit;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem 0 1rem 0;
+  z-index: 10;
 }
 
 .header-content {
