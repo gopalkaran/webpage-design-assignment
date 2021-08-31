@@ -48,7 +48,7 @@ header {
   grid-area: userlist;
   /* background-color: tomato; */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   /* gap: 1rem; */
   overflow-x: scroll;
@@ -122,7 +122,7 @@ header {
   grid-area: hero;
   /* background-color: pink; */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   overflow-x: scroll;
 }
@@ -147,8 +147,20 @@ header {
 .hero .hero-info {
   width: 50%;
   position: absolute;
-  top: 1rem;
-  left: 0.5rem;
+  top: 0.8rem;
+  left: 1rem;
+}
+
+.hero .hero-info h6 {
+  font-weight: 300;
+}
+
+.hero .hero-info h5 {
+  font-weight: 400;
+}
+.hero .hero-info h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .video-list {
