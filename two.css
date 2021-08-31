@@ -24,7 +24,24 @@ body {
 
 header {
   grid-area: header;
-  background-color: yellow;
+  background-color: #222;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.header-content {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h2 {
+  color: white;
+}
+
+.header-content svg {
+  fill: #999;
 }
 
 .user-list {
