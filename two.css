@@ -48,7 +48,7 @@ header {
   grid-area: userlist;
   /* background-color: tomato; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   /* gap: 1rem; */
   overflow-x: scroll;
@@ -64,7 +64,7 @@ header {
   position: relative;
 }
 
-.user-list .user .active-holder {
+.user-list .active-user .active-holder {
   height: 1.2rem;
   width: 1.2rem;
   background-color: #222;
@@ -77,7 +77,7 @@ header {
   bottom: 1.5rem;
 }
 
-.user-list .user .active-holder .active {
+.user-list .active-user .active-holder .active {
   height: 1rem;
   width: 1rem;
   background-color: #60a5fa;
@@ -87,12 +87,8 @@ header {
   border-radius: 50%;
 }
 
-.user-list .user .active svg {
+.user-list .active-user .active svg {
   width: 50%;
-}
-
-.user-list .user:first-child {
-  margin-left: 5.5rem;
 }
 
 .user-list .user h6 {
@@ -108,7 +104,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.1rem solid #60a5fa;
+  border: 0.1rem solid transparent;
 }
 
 .user-list .img-holder img {
@@ -116,6 +112,10 @@ header {
   height: 95%;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.user-list .active-user .img-holder {
+  border: 0.1rem solid #60a5fa;
 }
 
 .hero {
