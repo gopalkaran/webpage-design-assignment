@@ -121,20 +121,26 @@ header {
 .hero {
   grid-area: hero;
   /* background-color: pink; */
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(3, 18rem);
+  grid-template-rows: 10rem;
+  grid-gap: 1rem;
+  align-content: center;
+  margin-right: 1rem;
   overflow-x: scroll;
 }
 
 .hero .hero-item {
   color: white;
-  height: 10rem;
-  width: 18rem;
+  /* height: 10rem; */
+  /* width: 18rem; */
   border-radius: 1rem;
   /* background-color: purple; */
   position: relative;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 
 .hero .hero-img {
@@ -179,6 +185,7 @@ header {
   grid-template-rows: 8rem 8rem;
   margin-top: 1rem;
   grid-gap: 1rem;
+  margin-right: 1rem;
   overflow-x: scroll;
 }
 
