@@ -10,6 +10,7 @@
 
 *::-webkit-scrollbar {
   width: 1vw;
+  height: 1vh;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -25,7 +26,7 @@ body {
   background: #222;
   display: grid;
   grid-template-columns: 0.1fr 1fr 0.1fr;
-  grid-template-rows: 5rem 7rem 14rem 21rem 5rem;
+  grid-template-rows: 5rem 7rem 14rem 23rem 5rem;
   grid-template-areas:
     "header header header"
     ". userlist userlist"
@@ -190,6 +191,7 @@ header {
   grid-area: videolist;
   /* background-color: turquoise; */
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .video-section h3 {
@@ -204,6 +206,7 @@ header {
   grid-gap: 1rem;
   margin-right: 1rem;
   overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
 .video-list .video {
