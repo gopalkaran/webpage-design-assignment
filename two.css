@@ -8,6 +8,18 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 1vw;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #777;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
 body {
   font-family: Montserrat, sans-serif;
   background: #222;
@@ -56,7 +68,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   /* gap: 1rem; */
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .user-list .user {
@@ -135,7 +147,7 @@ header {
   grid-gap: 1rem;
   align-content: center;
   margin-right: 1rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .hero .hero-item {
@@ -191,7 +203,7 @@ header {
   margin-top: 1rem;
   grid-gap: 1rem;
   margin-right: 1rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .video-list .video {
