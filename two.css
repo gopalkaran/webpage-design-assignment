@@ -143,7 +143,7 @@ header {
   justify-content: flex-start;
   align-items: center; */
   display: grid;
-  grid-template-columns: repeat(3, 18rem);
+  grid-template-columns: repeat(3, minmax(18rem, 1fr));
   grid-template-rows: 10rem;
   grid-gap: 1rem;
   align-content: center;
@@ -200,7 +200,7 @@ header {
 
 .video-list {
   display: grid;
-  grid-template-columns: repeat(3, 20rem);
+  grid-template-columns: repeat(3, minmax(20rem, 1fr));
   grid-template-rows: 8rem 8rem;
   margin-top: 1rem;
   grid-gap: 1rem;
@@ -298,5 +298,11 @@ footer .footer-container a {
 
   .footer-container [data-footer-item] .info {
     font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .hero {
+    grid-template-rows: 12rem;
   }
 }
