@@ -1,3 +1,5 @@
+/* below code is used to navigate different pages by clicking on the items in footer section  */
+
 const footerItemList = document.querySelectorAll('[data-footer-item]');
 footerItemList.forEach(item => {
     item.addEventListener('click', ()=> {
@@ -9,11 +11,11 @@ footerItemList.forEach(item => {
 })
 
 
-
+/* below code is not part of the assignment I have added this function which can be used to show users online with simple modification */
 const userList = document.querySelectorAll('.user');
 // console.log(userList)
 userList.forEach(user => {
-    user.addEventListener('click', () => {
+    user.addEventListener('click', () => {  //instead of onclick event we can check user active status here
         if(!user.classList.contains('active-user')){
         // console.log(user);
         const activeIcon = 
