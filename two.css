@@ -64,11 +64,9 @@ header {
 
 .user-list {
   grid-area: userlist;
-  /* background-color: tomato; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* gap: 1rem; */
   overflow-x: auto;
 }
 
@@ -117,7 +115,6 @@ header {
 .user-list .img-holder {
   width: 4rem;
   height: 4rem;
-  /* background-color: green; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -138,31 +135,32 @@ header {
 
 .hero {
   grid-area: hero;
-  /* background-color: pink; */
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: center; */
   display: grid;
   grid-template-columns: repeat(3, minmax(18rem, 1fr));
   grid-template-rows: 10rem;
   grid-gap: 1rem;
   align-content: center;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   overflow-x: auto;
 }
 
 .hero .hero-item {
   color: white;
-  /* height: 10rem; */
-  /* width: 18rem; */
   border-radius: 1rem;
-  /* background-color: purple; */
   position: relative;
   /* margin-right: 1rem; */
 }
 
+.hero .hero-item:last-child {
+  margin-right: 1rem;
+}
+
+.hero .hero-item:hover {
+  /* box-shadow: 0 0 10px white; */
+  cursor: pointer;
+}
+
 .hero .hero-img {
-  /* background: url(hero_image_one.jpeg); */
   height: 100%;
   width: 100%;
   border-radius: 1rem;
@@ -189,7 +187,6 @@ header {
 
 .video-section {
   grid-area: videolist;
-  /* background-color: turquoise; */
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
@@ -202,18 +199,21 @@ header {
   display: grid;
   grid-template-columns: repeat(3, minmax(20rem, 1fr));
   grid-template-rows: 8rem 8rem;
-  margin-top: 1rem;
   grid-gap: 1rem;
-  margin-right: 1rem;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
 }
 
 .video-list .video {
-  /* background-color: red; */
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.video-list .video:hover {
+  /* box-shadow: 0 0 10px white; */
+  cursor: pointer;
+  /* border-radius: 1rem; */
 }
 
 .video-list .video img {
